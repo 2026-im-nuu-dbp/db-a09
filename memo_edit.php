@@ -19,8 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $content = $_POST["content"];
 
     $update_sql = "UPDATE dbmemo 
-                   SET title='$title', content='$content'
-                   WHERE id='$id'";
+            SET title='$title', content='$content'
+            WHERE id='$id'";
 
     if ($conn->query($update_sql) === TRUE) {
         header("Location: memo_list.php");

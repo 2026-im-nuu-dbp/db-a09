@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>新增圖文</title>
 </head>
 <body>
-    <h2>新增圖文</h2>
+    <h2></h2>新增圖文</h2>
 
     <form method="post" enctype="multipart/form-data">
         標題：<input type="text" name="title"><br><br>

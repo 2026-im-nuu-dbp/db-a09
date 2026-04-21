@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 6.0.0-dev+20260316.8b2a2c41dc
 -- https://www.phpmyadmin.net/
 --
--- 主機： 127.0.0.1
--- 產生時間： 2026-04-20 15:16:12
--- 伺服器版本： 10.4.32-MariaDB
--- PHP 版本： 8.0.30
+-- Host: localhost:3306
+-- Generation Time: Apr 21, 2026 at 02:28 AM
+-- Server version: 8.4.3
+-- PHP Version: 8.3.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,51 +18,50 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- 資料庫： `db_a09`
+-- Database: `db-a09`
 --
 
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `dbusers`
+-- Table structure for table `dbusers`
 --
 
 CREATE TABLE `dbusers` (
-  `id` int(11) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `nickname` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `gender` varchar(10) DEFAULT NULL,
-  `hobby` varchar(100) DEFAULT NULL
+  `id` int NOT NULL,
+  `username` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `nickname` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `gender` varchar(10) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `hobby` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- 傾印資料表的資料 `dbusers`
+-- Dumping data for table `dbusers`
 --
 
 INSERT INTO `dbusers` (`id`, `username`, `nickname`, `password`, `gender`, `hobby`) VALUES
-(1, 'U1133127', 'Di', '12345', '男', 'lol');
+(1, 'u1133135', 'jj', '0000', '男', '無');
 
 --
--- 已傾印資料表的索引
+-- Indexes for dumped tables
 --
 
 --
--- 資料表索引 `dbusers`
+-- Indexes for table `dbusers`
 --
 ALTER TABLE `dbusers`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- 使用資料表自動遞增(AUTO_INCREMENT) `dbusers`
+-- AUTO_INCREMENT for table `dbusers`
 --
 ALTER TABLE `dbusers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -18,6 +18,7 @@ if (!isset($_SESSION["username"])) {
 
     <a href="memo_add.php">新增圖文</a><br><br>
     <a href="memo_list.php">查看圖文</a><br><br>
+    <a href="log_list.php">瀏覽登入紀錄</a><br><br>
     <a href="logout.php">登出</a>
 </body>
 </html>

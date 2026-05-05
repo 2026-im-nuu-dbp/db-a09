@@ -23,6 +23,7 @@ if (empty($username) || empty($password) || empty($nickname)) {
         $message = "註冊失敗：" . $conn->error;
     }
 }
+}
 ?>
 
 <!DOCTYPE html>
